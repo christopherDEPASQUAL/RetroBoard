@@ -1,0 +1,228 @@
+:root {
+    --padding: 10px;
+    --primary-color: #043498;
+    --secondary-color: #6799C9;
+}
+
+nav {
+    background: var(--primary-color);
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+nav ul {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    list-style: none;
+}
+
+nav ul a {
+    color: white;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+.markdown-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 15px;
+    padding-bottom: 20px;
+}
+
+.preview-container .hidden-ul, .hidden-list {
+    display: none;
+}
+
+.preview-container .hidden-ul li {
+    cursor: pointer;
+}
+
+.top-markdown {
+    text-align: center;
+    padding: var(--padding);
+    background: var(--secondary-color);
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.top-markdown ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+}
+
+.top-markdown ul li:hover{
+    cursor: pointer;
+}
+
+.markdown-container .preview-container > div > h2, .top-preview > h2 {
+    text-align: center;
+}
+
+.markdown-container input {
+    padding: 8px;
+}
+
+.markdown-container button {
+    padding: 8px;
+}
+
+.markdown-container > div:nth-of-type(2) {
+    display: flex;
+    flex: 1;
+    padding: 20px;
+    gap: 20px;
+}
+
+.list {
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+}
+
+.markdown-box {
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+}
+
+.markdown-h2 {
+    background: var(--secondary-color);
+    text-align: center;
+    color: white;
+}
+
+.list > div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1;
+}
+
+.list ul {
+    list-style: none;
+    padding: 10px;
+}
+
+.list ul li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.list ul li img {
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+}
+
+.list ul a {
+    color: black;
+}
+
+.list label {
+    padding: 10px;
+    width: 100%;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+}
+
+.list input {
+    display: none;
+}
+
+.preview-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.preview-container > ul {
+    list-style: none;
+    display: flex;
+    background-color: var(--secondary-color);
+    justify-content: space-around;
+    color: white;
+    padding: 10px;
+    font-size: 1.2rem;
+}
+
+
+.preview-container > .right-preview {
+    display: flex;
+    width: 100%;
+    gap: 10px;
+    height: 75vh;
+}
+
+.right-preview > div {
+    width: 50%;
+}
+
+.preview-container form {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    gap: 10px;
+}
+
+.preview-container form textarea {
+    resize: none;
+    flex: 1;
+    padding: var(--padding);
+}
+
+.right-preview {
+    height: 100%;
+}
+
+.preview {
+    overflow: auto;
+    padding: var(--padding);
+}
+
+@media screen and (max-width: 1300px) {
+    .list {
+        width: 25%;
+    }
+    .preview-container {
+        gap: 20px;
+    }
+
+    .preview-container .hidden-ul {
+        display: flex;
+    }
+
+    .preview-show {
+        display: none;
+    }
+
+    .right-preview > div {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .markdown-container > div:nth-of-type(2)  {
+        flex-direction: column;
+    }
+
+    .markdown-container .markdown-box{
+        width: 100%;
+    }
+
+    .markdown-container .markdown-box ul {
+        flex-direction: row;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .markdown-container .markdown-box ul li {
+        width: fit-content;
+        margin: 0 20px;
+    }
+}
